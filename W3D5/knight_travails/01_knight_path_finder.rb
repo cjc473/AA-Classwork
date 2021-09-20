@@ -1,4 +1,5 @@
 require_relative "00_tree_node.rb"
+require "byebug"
 
 class KnightPathFinder
 
@@ -41,10 +42,10 @@ class KnightPathFinder
 
   attr_reader :root_node, :considered_positions
 
-  def initialize(start_pos)
+  def initialize(start_pos, target)
     @root_node = PolyTreeNode.new(start_pos)
     @considered_positions = [start_pos]
-    # build_move_tree(self.root_node)
+    build_move_tree(self.root_node.value, target)
   end
 
   def new_move_positions(pos)
@@ -54,10 +55,31 @@ class KnightPathFinder
     new_moves
   end
 
-  def build_move_tree(pos)
-    
-
+  def build_move_tree(pos, target)
+    # debugger
+    first_moves = new_move_positions(pos)
+    queue = first_moves
+    while !queue.empty?
+      current = queue.shift
+      # p queue
+      if current == target
+        puts " -------- "
+        return p current
+      end
+      current_moves = new_move_positions(current)
+      current_moves.each { |move| queue.push(move) }
+    end
   end
+
+  # def bfs(target)
+  #   queue = [self]
+  #   while !queue.empty?
+  #     current = queue.shift
+  #     return current if current.value == target
+  #     current.children.each { |child| queue.push(child) }
+  #   end
+  # end
+
 
 # starting pos is root tree node. you generate children using available moves.
 
@@ -66,8 +88,10 @@ end
 
 
 
-k = KnightPathFinder.new([0, 0])
-p KnightPathFinder.valid_moves([1,2])
-p k.considered_positions
-p k.new_move_positions([0,0])
-p k.considered_positions
+k = KnightPathFinder.new([0, 0], [3, 3])
+p k
+# p KnightPathFinder.valid_moves([1,2])
+# p k.considered_positions
+# p k.new_move_positions([0,0])
+# p k.considered_positions
+# p k.root_node
