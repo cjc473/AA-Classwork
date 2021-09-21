@@ -40,12 +40,12 @@ class KnightPathFinder
     end
   end
 
-  attr_reader :root_node, :considered_positions
+  attr_reader :start_pos, :considered_positions, :root_node
 
   def initialize(start_pos, target)
-    @root_node = PolyTreeNode.new(start_pos)
+    @start_pos = start_pos
     @considered_positions = [start_pos]
-    build_move_tree(self.root_node.value, target)
+    build_move_tree
   end
 
   def new_move_positions(pos)
@@ -55,21 +55,49 @@ class KnightPathFinder
     new_moves
   end
 
-  def build_move_tree(pos, target)
-    # debugger
-    first_moves = new_move_positions(pos)
-    queue = first_moves
-    while !queue.empty?
-      current = queue.shift
-      # p queue
-      if current == target
-        puts " -------- "
-        return p current
+  def build_move_tree
+    @root_node = PolyTreeNode.new(start_pos)
+    all_moves = [root_node]
+
+    until all_moves.empty?
+      current_node = all_moves.shift
+      current_children = new_move_positions(current_node.pos)
+
+      current_children.each do |move|
+        child = PolyTreeNode.new(move)
+        current_node.add_child(child)
+        all_moves << child
       end
-      current_moves = new_move_positions(current)
-      current_moves.each { |move| queue.push(move) }
+      p all_moves.count
     end
   end
+
+  def find_path(end_pos)
+    end_node = root_node.bfs(end_pos)
+
+
+
+  end
+
+  def trace_path_back()
+    
+  end
+
+  # def build_move_tree(pos, target)
+  #   # debugger
+  #   first_moves = new_move_positions(pos)
+  #   queue = first_moves
+  #   while !queue.empty?
+  #     current = queue.shift
+  #     # p queue
+  #     if current == target
+  #       puts " -------- "
+  #       return p current
+  #     end
+  #     current_moves = new_move_positions(current)
+  #     current_moves.each { |move| queue.push(move) }
+  #   end
+  # end
 
   # def bfs(target)
   #   queue = [self]
@@ -81,15 +109,13 @@ class KnightPathFinder
   # end
 
 
-# starting pos is root tree node. you generate children using available moves.
-
-
 end
 
 
 
 k = KnightPathFinder.new([0, 0], [3, 3])
 p k
+p k.considered_positions.length
 # p KnightPathFinder.valid_moves([1,2])
 # p k.considered_positions
 # p k.new_move_positions([0,0])
