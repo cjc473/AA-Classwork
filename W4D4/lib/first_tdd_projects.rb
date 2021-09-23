@@ -53,5 +53,5 @@ class Array
 
     array.flatten
   end
-
 end
+
