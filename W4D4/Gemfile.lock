@@ -23,7 +23,7 @@ GEM
     rspec-support (3.10.2)
 
 PLATFORMS
-  universal-darwin-20
+  ruby
 
 DEPENDENCIES
   byebug
@@ -31,4 +31,4 @@ DEPENDENCIES
   rspec
 
 BUNDLED WITH
-   2.2.16
+   2.1.4
