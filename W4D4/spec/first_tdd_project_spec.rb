@@ -42,5 +42,16 @@ end
 
   describe "stock_picker" do
     let(:array) { [5, 12, 1, 4, 10, 8] }
+    it "should take in an array" do
+      expect{array.stock_picker}.to_not raise_error
+    end
+
+    context "should find the biggest difference in prices" do
+      it "should add pairs of indices to array" do
+        expect(array.stock_picker).to eq([2, 4])
+      end
+    end
   end
+
+
 end

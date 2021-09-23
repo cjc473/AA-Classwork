@@ -27,4 +27,31 @@ class Array
     end
     zipped
   end
+
+  def stock_picker
+    array = []
+    count = 0
+
+    self.each_with_index do |ele, idx|
+      self.each_with_index do |ele2, idx2|
+        if idx2 > idx
+          sum = ele2 - ele
+          if count < sum
+            count = sum
+          end
+        end
+      end
+    end
+
+    (0...self.length).each do |ele|
+      (0...self.length).each do |ele2|
+        if ele2 > ele && (self[ele2] - self[ele] == count)
+          array << [ele, ele2]
+        end
+      end
+    end
+
+    array.flatten
+  end
+
 end
