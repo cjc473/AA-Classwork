@@ -34,9 +34,13 @@ describe "my_transpose" do
     it "should take in a matrix" do 
       expect{array.my_transpose}.to_not raise_error
     end
+  
+  it "should transpose an array" do
+    expect(array.my_transpose).to eq(array.transpose)
   end
+end
 
-
-
-
+  describe "stock_picker" do
+    let(:array) { [5, 12, 1, 4, 10, 8] }
+  end
 end

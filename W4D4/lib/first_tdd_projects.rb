@@ -18,4 +18,13 @@ class Array
     new_arr
   end
 
+  def my_transpose
+    zipped = Array.new(self.length) {Array.new(self.length)}
+    (0...self.size).each do |i|
+      (0...self.size).each do |j|
+        zipped[i][j] = self[j][i]
+      end
+    end
+    zipped
+  end
 end
