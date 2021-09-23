@@ -1,9 +1,9 @@
 class Towers
-  attr_reader :stack_1, :stack_2, :stack_3
-  def initialize
-    @stack_1 = [5, 4, 3, 2, 1]
-    @stack_2 = []
-    @stack_3 = []
+  attr_accessor :stack_1, :stack_2, :stack_3
+  def initialize(stack_1=[5,4,3,2,1], stack_2=[], stack_3=[])
+    @stack_1 = stack_1
+    @stack_2 = stack_2
+    @stack_3 = stack_3
   end
 
   def move(start_stack, end_stack)
