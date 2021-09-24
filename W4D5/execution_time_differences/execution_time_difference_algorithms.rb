@@ -40,16 +40,23 @@ c_list = [-5, -1, -3]
 def largest_contiguous_subsum(arr)
   largest_sum = arr.first
   current_sum = arr.first
-  temp = []
-
-  (0...arr.length).each do |i|
-    temp << arr[0..i].sum
-    # largest_sum = current_sum if current_sum > largest_sum
+  
+  if arr.any? {|n| n > -1}
+    current_sum = 0
+    (0...arr.length).each do |i|
+      if current_sum + arr[i] > 0
+        current_sum += arr[i]
+      else
+        current_sum = 0
+      end
+      largest_sum = current_sum if current_sum > largest_sum
+    end
+  else
+    (0...arr.length).each {|i| largest_sum = arr[i] if arr[i] > largest_sum}
   end
 
-
-
   largest_sum
+
 end
 
 
