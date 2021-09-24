@@ -34,6 +34,21 @@
 a_list = [5, 3, -7]
 b_list = [2, 3, -6, 7, -6, 7]
 c_list = [-5, -1, -3]
+# slice-length arr of 5 number, check 5 differenct slice-lengths from 1,2,3,4,5
+# list of number, index 0, checked_arr = [5] 
+
+def largest_contiguous_subsum(arr)
+  largest_sum = arr.first
+  current_sum = arr.first
+  j = arr.length-1
+  while j > -1
+  (...arr.length).each do |i|
+    current_sum = arr[0..i].sum
+    largest_sum = current_sum if current_sum > largest_sum
+  end
+  largest_sum
+end
+
 
 p largest_contiguous_subsum(a_list)
 p largest_contiguous_subsum(b_list)
