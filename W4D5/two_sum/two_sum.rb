@@ -11,9 +11,21 @@ def bad_two_sum?(arr, target_sum) # O(n^2)
 end
 
 
-def okay_two_sum?
+def okay_two_sum?(arr, target_sum)
+  new_arr = arr.sort.select { |n| target_sum > n }
+  (new_arr.length - 1).downto(0).each do |i|
+    return true if new_arr[0...i].include?(target_sum - new_arr[i])
+  end
+  false
+end
+
+
+def good_two_sum?(arr, target_sum)
 
 end
+
+
+
 
 
 
