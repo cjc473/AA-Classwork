@@ -73,16 +73,28 @@ class ResizingIntSet
   def initialize(num_buckets = 20)
     @store = Array.new(num_buckets) { Array.new }
     @count = 0
+    @curr_length = @store.length
   end
 
   def insert(num)
+    idx = num % @curr_length
+    @store[idx] << num if !@store[idx].include?(num)
+    @count += 1
   end
 
   def remove(num)
+    idx = num % @curr_length
+    @count -= 1 if @store[idx].delete(num)
   end
 
   def include?(num)
+    @store.each do |row|
+      return true if row.include?(num)
+    end
+    false
   end
+
+
 
   private
 
@@ -95,5 +107,18 @@ class ResizingIntSet
   end
 
   def resize!
+    num_buckets = @store.length
+    if count == num_buckets
+      new_store = Array.new(num_buckets * 2) {Array.new}
+      @curr_length = new_store.length
+      
+      @store.each do |row|
+        new_store[row.first % @curr_length] << row.first
+      end
+      @store = new_store
+    end
+
+
+
   end
 end
