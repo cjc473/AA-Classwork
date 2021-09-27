@@ -18,11 +18,11 @@ GEM
     rspec-support (3.4.1)
 
 PLATFORMS
-  x86_64-darwin-20
+  ruby
 
 DEPENDENCIES
   byebug
   rspec (~> 3.4.0)
 
 BUNDLED WITH
-   2.2.26
+   2.1.4
