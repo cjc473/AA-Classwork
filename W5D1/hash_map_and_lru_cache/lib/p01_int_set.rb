@@ -68,22 +68,24 @@ class IntSet
 end
 
 class ResizingIntSet
-  attr_reader :count
+  attr_reader :count, :curr_length, :store
 
   def initialize(num_buckets = 20)
     @store = Array.new(num_buckets) { Array.new }
     @count = 0
-    @curr_length = @store.length
   end
 
   def insert(num)
-    idx = num % @curr_length
-    @store[idx] << num if !@store[idx].include?(num)
-    @count += 1
+    idx = num % num_buckets
+    if !include?(num)
+      @store[idx] << num 
+      @count += 1
+      resize! if count > num_buckets
+    end
   end
 
   def remove(num)
-    idx = num % @curr_length
+    idx = num % num_buckets
     @count -= 1 if @store[idx].delete(num)
   end
 
@@ -107,18 +109,34 @@ class ResizingIntSet
   end
 
   def resize!
-    num_buckets = @store.length
-    if count == num_buckets
-      new_store = Array.new(num_buckets * 2) {Array.new}
-      @curr_length = new_store.length
-      
-      @store.each do |row|
-        new_store[row.first % @curr_length] << row.first
-      end
-      @store = new_store
+    old_store = @store
+    @count = 0
+    @store = Array.new(num_buckets * 2) {Array.new}
+
+    old_store.flatten.each do |num|
+      insert(num)
     end
+
+
+    # if count == num_buckets
+
+
+      # new_store = Array.new(num_buckets * 2) {Array.new}
+      # @curr_length = new_store.length
+      
+      # @store.each do |row|
+      #   new_store[row.first % @curr_length] << row.first
+      # end
+      # @store = new_store
 
 
 
   end
 end
+
+# a = ResizingIntSet.new(20)
+# p a.curr_length
+# p a.store
+# p a.resize!
+# p a.curr_length
+# p a.store
