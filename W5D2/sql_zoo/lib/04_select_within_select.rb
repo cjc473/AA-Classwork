@@ -60,13 +60,13 @@ def richer_than_england
     FROM
       countries
     WHERE
-      (gdp / population) > (
+      continent = 'Europe' AND (gdp / population) > (
         SELECT
-          gdp / population
+          (gdp / population)
         FROM
           countries
         WHERE
-          name='United Kingdom'
+          name = 'United Kingdom'
         );
   SQL
 end
@@ -100,14 +100,14 @@ def population_constraint
     FROM
       countries
     WHERE
-      population BETWEEN (
+      population > (
         SELECT
           population
         FROM
           countries
         WHERE
           name = 'Canada'
-        ) AND
+        ) AND population < 
       ( SELECT
             population
           FROM
