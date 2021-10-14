@@ -24,6 +24,10 @@
 		color: $dark-gray;
 	}
 
+	a:hover {
+		text-decoration: underline;
+	}
+
 	ul {
 		display: flex;
 	}
@@ -55,7 +59,7 @@
 	}
 
 	button:hover {
-		background-color: $lightest-gray;
+		background-color: $light-gray;
 	}
 
 	a,
