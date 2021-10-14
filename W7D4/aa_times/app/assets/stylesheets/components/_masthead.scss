@@ -3,6 +3,7 @@
 	flex-direction: column;
 	align-items: center;
 	border-bottom: 2px solid black;
+  border-top: 1px solid $light-gray;
 	position: relative;
 }
 
@@ -47,6 +48,7 @@
 
 	li {
 		margin-left: 10px;
+    padding-right: 10px;
 		border-right: 1px solid $light-gray;
 	}
 
@@ -65,7 +67,7 @@
 	a,
 	button, 
 	time {
-		margin-right: 10px;
+		border-bottom: 1px solid #000;
 	}
 
 	i {
@@ -75,4 +77,8 @@
 	strong {
 		color: green;
 	}
+
+  li:last-child {
+    border: none;
+  }
 }
