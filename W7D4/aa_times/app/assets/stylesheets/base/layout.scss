@@ -16,19 +16,19 @@ button {
 	background-color: darkcyan;
 	border-color:	darkblue;
 	color:white;
-	font-weight: 16px
-	// padding:
-	// border-radius:
-	// transition:
-	// font-family:
-	// text-transform:
-	// font-size:
-	// text-align:
+	font-weight: 16px;
+	padding: 6px 6px;
+	border-radius: 2px;
+	transition: transform 1s;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	font-size: 11px;
+	text-align: center;
 }
 
 button:hover {
-	// background-color:
-	// border-color:
+	background-color: blue;
+	border-color: darkblue;
 }
 
 /*
