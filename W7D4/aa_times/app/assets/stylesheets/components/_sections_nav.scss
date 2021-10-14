@@ -1,0 +1,13 @@
+.sections-nav {
+  border-bottom: 1px solid $light-gray;
+  flex-direction: column;
+	align-items: center;
+  position: relative;
+}
+
+.sections-nav-items > li {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin: 6px;
+}
