@@ -345,3 +345,132 @@ Started GET "/assets/application.self-0022c9e391633aa9bf4e1ffcd6b2b26c58ca05825f
 Started GET "/assets/application.self-0022c9e391633aa9bf4e1ffcd6b2b26c58ca05825f4b56a9b07b231e5268ae8f.css?body=1&livereload=1634244972010" for ::1 at 2021-10-14 13:56:12 -0700
 Started GET "/assets/application.self-0022c9e391633aa9bf4e1ffcd6b2b26c58ca05825f4b56a9b07b231e5268ae8f.css?body=1&livereload=1634244973968" for ::1 at 2021-10-14 13:56:13 -0700
 Started GET "/assets/application.self-0022c9e391633aa9bf4e1ffcd6b2b26c58ca05825f4b56a9b07b231e5268ae8f.css?body=1&livereload=1634244973969" for ::1 at 2021-10-14 13:56:13 -0700
+Started GET "/" for ::1 at 2021-10-14 14:01:19 -0700
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /home/emmetthe/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.0.7.2/lib/active_record/railtie.rb:113)
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.4ms)
+  Rendered shared/_masthead.html.erb (0.3ms)
+  Rendered shared/_sections_nav.html.erb (0.2ms)
+  Rendered shared/_search_modal.html.erb (0.2ms)
+  Rendered shared/_main_content.html.erb (0.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (258.0ms)
+Completed 200 OK in 4048ms (Views: 3995.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-8567fb2632d803eabb868c3b51f8ffc63feeaccd4ca2a9c70f7cff9f2de0c4c1.css?body=1" for ::1 at 2021-10-14 14:01:24 -0700
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2021-10-14 14:01:24 -0700
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2021-10-14 14:01:24 -0700
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for ::1 at 2021-10-14 14:01:24 -0700
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for ::1 at 2021-10-14 14:01:24 -0700
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for ::1 at 2021-10-14 14:01:24 -0700
+Started GET "/" for ::1 at 2021-10-14 14:06:42 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.2ms)
+  Rendered shared/_search_modal.html.erb (0.3ms)
+  Rendered shared/_main_content.html.erb (0.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (210.7ms)
+Completed 200 OK in 560ms (Views: 507.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-10-14 14:13:12 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.3ms)
+  Rendered shared/_masthead.html.erb (0.3ms)
+  Rendered shared/_sections_nav.html.erb (0.3ms)
+  Rendered shared/_search_modal.html.erb (0.2ms)
+  Rendered shared/_main_content.html.erb (0.3ms)
+  Rendered static_pages/index.html.erb within layouts/application (253.7ms)
+Completed 500 Internal Server Error in 745ms (ActiveRecord: 0.0ms)
+
+
+
+Sass::SyntaxError - Invalid CSS after "	font-weight": expected ";", was ":":
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___3904832646019876056_70233665294040'
+
+Started POST "/__better_errors/62ef786a468c9eee/variables" for ::1 at 2021-10-14 14:13:13 -0700
+Started GET "/" for ::1 at 2021-10-14 14:13:28 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.2ms)
+  Rendered shared/_search_modal.html.erb (0.2ms)
+  Rendered shared/_main_content.html.erb (0.3ms)
+  Rendered static_pages/index.html.erb within layouts/application (236.8ms)
+Completed 200 OK in 1486ms (Views: 1439.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d1495ff8c70d9768df343f9a36bd0c3ccce731c41581a4c8eb93fb97bc725dd9.css?body=1" for ::1 at 2021-10-14 14:13:29 -0700
+Started GET "/" for ::1 at 2021-10-14 14:14:50 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.2ms)
+  Rendered shared/_search_modal.html.erb (0.6ms)
+  Rendered shared/_main_content.html.erb (0.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (192.1ms)
+Completed 500 Internal Server Error in 637ms (ActiveRecord: 0.0ms)
+
+
+
+Sass::SyntaxError - Invalid CSS after "	padding": expected ";", was ":":
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___3904832646019876056_70233659199300'
+
+Started POST "/__better_errors/9c87aff3d1aaf630/variables" for ::1 at 2021-10-14 14:14:51 -0700
+Started GET "/" for ::1 at 2021-10-14 14:14:58 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.3ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.3ms)
+  Rendered shared/_search_modal.html.erb (0.2ms)
+  Rendered shared/_main_content.html.erb (0.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (237.4ms)
+Completed 200 OK in 1468ms (Views: 1422.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fb2615ad14115943178232073365bda551ae2cf012a4e3ccd642288931783ef4.css?body=1" for ::1 at 2021-10-14 14:14:59 -0700
+Started GET "/" for ::1 at 2021-10-14 14:15:11 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.2ms)
+  Rendered shared/_search_modal.html.erb (0.2ms)
+  Rendered shared/_main_content.html.erb (0.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (252.4ms)
+Completed 200 OK in 1504ms (Views: 1450.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-a67e43ed59dac692934dfd983335f883ca229d5796c0f4b8387d01a58f2fc463.css?body=1" for ::1 at 2021-10-14 14:15:12 -0700
+Started GET "/" for ::1 at 2021-10-14 14:15:35 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.3ms)
+  Rendered shared/_sections_nav.html.erb (0.2ms)
+  Rendered shared/_search_modal.html.erb (0.2ms)
+  Rendered shared/_main_content.html.erb (0.3ms)
+  Rendered static_pages/index.html.erb within layouts/application (241.5ms)
+Completed 200 OK in 647ms (Views: 603.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-10-14 14:15:50 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.3ms)
+  Rendered shared/_search_modal.html.erb (0.3ms)
+  Rendered shared/_main_content.html.erb (0.3ms)
+  Rendered static_pages/index.html.erb within layouts/application (245.2ms)
+Completed 200 OK in 1495ms (Views: 1441.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-c3caf5b335b040f38fa96ecc112738edcb57b1f677d26e08b3eda4c6a640c714.css?body=1" for ::1 at 2021-10-14 14:15:51 -0700
