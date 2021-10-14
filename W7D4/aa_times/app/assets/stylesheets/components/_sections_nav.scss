@@ -5,9 +5,23 @@
   position: relative;
 }
 
-.sections-nav-items > li {
-  position: absolute;
+.sections-nav-items {
+  // position: absolute;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: 6px;
+  padding: 2px;
+  
+
+  li {
+  margin: 6px;
+  }   
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
+
