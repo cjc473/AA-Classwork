@@ -4,6 +4,7 @@ class Clock extends React.Component {
   constructor() {
     super();
     this.state = { time: new Date() }
+    // this.tick = this.tick.bind(tick)
   }
 
   tick(){
@@ -14,9 +15,13 @@ class Clock extends React.Component {
     return (<h1>High Tech Clock</h1>)
   }
 
-  componentWillUnmount() {
-    this.tick()
+  componentDidMount() {
+    setInterval(this.tick.bind(tick), 1000);
   }
+
+  // componentWillUnmount() {
+  //   this.tick()
+  // }
 }
 
 export default Clock;
