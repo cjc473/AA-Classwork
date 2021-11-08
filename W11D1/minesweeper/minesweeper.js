@@ -124,3 +124,5 @@ export class Board {
     return won;
   }
 }
+
+export default (Board)(Tile)
