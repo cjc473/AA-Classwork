@@ -8,7 +8,9 @@ class Tile extends React.Component{
 
     render() {
       return (
-        <div>T</div>
+        <div>
+          <h1>T</h1>
+        </div>
       )
     }
 }
