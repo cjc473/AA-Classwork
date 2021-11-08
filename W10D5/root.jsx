@@ -1,9 +1,13 @@
 import React from "react";
 import Clock from "./clock";
-
+import Tabs from "./tabs";
 
 const Root = () => {
-  return (<Clock />)
+  return (
+    <div>
+      <Clock />
+      <Tabs />
+    </div>)
 }
 
 // class Root extends React.Component{
