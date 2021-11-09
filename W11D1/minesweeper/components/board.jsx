@@ -21,6 +21,7 @@ class Board extends React.Component {
                  tile={currentTile}
                  updateGame={this.props.updateGame}
                  key={[i, j]}
+                 
                />
              )
             })}

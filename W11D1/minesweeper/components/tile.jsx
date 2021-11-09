@@ -36,7 +36,7 @@ tileStatus(){
       const currentTile = this.props.tile;
       return (
         // <h1>T</h1>
-        <div className="tile">
+        <div className="tile" onClick={handleClick()}>
           { this.tileStatus()}
         </div>
       )
@@ -44,11 +44,13 @@ tileStatus(){
 
     handleClick() {
       const currentTile = this.props.tile
-      const revealed = (!(currentTile.flagged) && currentTile.explored)
-      if (revealed) {
-
+      const flagging = (e => {
+          e.altKey 
+      })
+      const unrevealed = (!(currentTile.flagged) && !(currentTile.explored))
+      if (unrevealed) {
+            this.props.updateGame(currentTile, flagging)
       }
-      this.props.updateGame
     }
 
     /// handle click should update if tile is unrevealed and unflagged.
