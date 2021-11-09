@@ -1,0 +1,8 @@
+.row {
+  display: flex;
+
+}
+
+.tile {
+  background-color: aqua;
+}
