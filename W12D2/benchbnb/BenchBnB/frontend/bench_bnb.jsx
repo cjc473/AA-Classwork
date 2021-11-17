@@ -6,9 +6,9 @@ import {
   logout
 } from './util/session_api_util.js'
 // require jquery
-const testCreateUser = () => (
-  $.ajax({ method: "POST", url: "/api/users", data: { user: {username: "bob12345", password: "password123"} } })
-)
+// const testCreateUser = () => (
+//   $.ajax({ method: "POST", url: "/api/users", data: { user: {username: "bob12345", password: "password123"} } })
+// )
 //test code below:
 
 window.testCreateUser = testCreateUser;
