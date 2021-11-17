@@ -225,3 +225,137 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 637ms (Views: 634.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2021-11-16 15:34:59 -0800
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.7ms)
+Completed 200 OK in 399ms (Views: 397.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-11-16 16:05:33 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.5ms)
+Completed 200 OK in 225ms (Views: 222.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-11-16 16:18:35 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 221ms (Views: 218.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-11-16 16:38:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/christophercheasty/Desktop/Code/AA/AA-Classwork/W12D2/benchbnb/BenchBnB/app/assets/config
+  /Users/christophercheasty/Desktop/Code/AA/AA-Classwork/W12D2/benchbnb/BenchBnB/app/assets/images
+  /Users/christophercheasty/Desktop/Code/AA/AA-Classwork/W12D2/benchbnb/BenchBnB/app/assets/javascripts
+  /Users/christophercheasty/Desktop/Code/AA/AA-Classwork/W12D2/benchbnb/BenchBnB/app/assets/stylesheets
+  /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.6/lib/assets/compiled
+  /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.6/app/assets/javascripts
+  /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.6/lib/assets/compiled
+  /Users/christophercheasty/Desktop/Code/AA/AA-Classwork/W12D2/benchbnb/BenchBnB/node_modules):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/assets/javascripts/application.js:13
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___2762766216126147326_70090476558980'
+Started GET "/" for ::1 at 2021-11-16 16:40:11 -0800
+  [1m[35m (7.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (1.2ms)
+Completed 200 OK in 745ms (Views: 741.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-11-16 16:40:26 -0800
+Processing by Api::UsersController#create as */*
+  Parameters: {"username"=>"bob12345", "password"=>"[FILTERED]", "default"=>{"format"=>:json}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/christophercheasty/Desktop/Code/AA/AA-Classwork/W12D2/benchbnb/BenchBnB/app/models/user.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :username, uniqueness: true
+            ^):
+  
+app/models/user.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/controllers/api/users_controller.rb:3:in `create'
+Started POST "/api/users" for ::1 at 2021-11-16 16:41:12 -0800
+Processing by Api::UsersController#create as */*
+  Parameters: {"username"=>"bob12345", "password"=>"[FILTERED]", "default"=>{"format"=>:json}}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/christophercheasty/Desktop/Code/AA/AA-Classwork/W12D2/benchbnb/BenchBnB/app/models/user.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :username, uniqueness: true
+            ^):
+  
+app/models/user.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/controllers/api/users_controller.rb:3:in `create'
+Started GET "/" for ::1 at 2021-11-16 16:41:21 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 279ms (Views: 277.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-11-16 16:41:24 -0800
+Processing by Api::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"bob12345", "password"=>"[FILTERED]"}, "default"=>{"format"=>:json}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/christophercheasty/Desktop/Code/AA/AA-Classwork/W12D2/benchbnb/BenchBnB/app/models/user.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :username, uniqueness: true
+            ^):
+  
+app/models/user.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/controllers/api/users_controller.rb:3:in `create'
+Started GET "/" for ::1 at 2021-11-16 16:42:48 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-11-16 16:42:50 -0800
+Processing by Api::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"bob12345", "password"=>"[FILTERED]"}, "default"=>{"format"=>:json}}
+Started POST "/api/users" for ::1 at 2021-11-16 16:44:26 -0800
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Api::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"bob12345", "password"=>"[FILTERED]"}, "default"=>{"format"=>:json}}
+Started GET "/" for ::1 at 2021-11-16 16:45:27 -0800
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (1.2ms)
+Completed 200 OK in 534ms (Views: 532.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-11-16 16:45:31 -0800
+Processing by Api::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"bob12345", "password"=>"[FILTERED]"}, "default"=>{"format"=>:json}}
