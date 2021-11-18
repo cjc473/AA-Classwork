@@ -5,7 +5,7 @@ import {
 
 const _nullSession = {id: null};
 
-const sessionReducer = (oldState = {}, action) => {
+const sessionReducer = (oldState = _nullSession, action) => {
   Object.freeze(oldState);
   let nextState = Object.assign({}, oldState);
   switch(action.type) {
